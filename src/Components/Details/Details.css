@@ -16,7 +16,7 @@
 }
 
 .heading {
-  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 2vh;
@@ -31,4 +31,33 @@
     width: 35vw;
     height: 40vh;
   }
+}
+
+.word-count,
+.letter-count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem;
+}
+
+.counter {
+  font-size: 1.5rem;
+  color: #404040;
+  font-weight: 600;
+}
+
+.label {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid #940eff;
 }

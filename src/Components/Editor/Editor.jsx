@@ -1,7 +1,7 @@
 import React from "react";
 import "./Editor.css";
 
-const Editor = () => {
+const Editor = ({ text, setText }) => {
   return (
     <div className="editor-container">
       <div className="editor">
@@ -9,6 +9,9 @@ const Editor = () => {
           type="text"
           className="textarea"
           placeholder="Just Starting Typing !"
+          onChange={(e) => {
+            setText(e.target.value);
+          }}
         ></textarea>
       </div>
     </div>
