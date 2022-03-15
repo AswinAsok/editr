@@ -20,6 +20,7 @@
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 2vh;
+  text-align: center;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -33,31 +34,37 @@
   }
 }
 
-.word-count,
-.letter-count {
+.counters-container{
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+}
+
+.count {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .counter {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #404040;
   font-weight: 600;
 }
 
 .label {
+  margin-top: 1vh;
   margin-left: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 .circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   border: 2px solid #940eff;
 }

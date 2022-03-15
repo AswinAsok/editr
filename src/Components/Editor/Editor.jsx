@@ -12,6 +12,7 @@ const Editor = ({ text, setText }) => {
           onChange={(e) => {
             setText(e.target.value);
           }}
+          value={text}
         ></textarea>
       </div>
     </div>

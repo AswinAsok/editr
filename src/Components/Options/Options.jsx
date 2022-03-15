@@ -4,12 +4,19 @@ import headset from "./assets/headset.png";
 import trash from "./assets/trash.png";
 import star from "./assets/star.png";
 
-const Options = () => {
+const Options = ({ setText }) => {
   return (
     <div className="options-container">
       <div className="options">
         <img src={headset} alt="" className="option" />
-        <img src={trash} alt="" className="option" />
+        <img
+          src={trash}
+          alt=""
+          className="option"
+          onClick={() => {
+            setText("");
+          }}
+        />
         <img src={star} alt="" className="option" />
       </div>
     </div>

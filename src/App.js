@@ -38,7 +38,7 @@ function App() {
         <Editor text={text} setText={setText} />
         <Details words={words} characters={characters} special={special} />
       </div>
-      <Options />
+      <Options setText={setText} />
     </div>
   );
 }
