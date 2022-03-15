@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap");
+
+.navbar-container {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background-color: #940eff;
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  margin-top: 0.25vh;
+}
