@@ -2,6 +2,7 @@
 
 .details-container {
   background-color: white;
+  margin-top: 2vh;
 }
 
 .details {
@@ -22,8 +23,12 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .details-container {
+    margin-top: 0;
+  }
+
   .details {
-    width: 40vw;
+    width: 35vw;
     height: 40vh;
   }
 }

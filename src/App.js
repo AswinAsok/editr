@@ -12,7 +12,7 @@ function App() {
         <Editor />
         <Details />
       </div>
-      {/* <Options /> */}
+      <Options />
     </div>
   );
 }
