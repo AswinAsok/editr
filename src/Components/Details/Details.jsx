@@ -29,6 +29,16 @@ const Details = ({ words, characters, special }) => {
             <p className="label">Characters</p>
           </div>
         </div>
+
+        <div className="creator-container">
+          <p className="heading">Creator Staticstics</p>
+          <div className="creator">
+            <iframe
+              src="https://github-readme-stats.vercel.app/api?username=aswinasok&border_color=940EFF&bg_color=940EFF&text_color=ffff&title_color=ffff"
+              frameborder="0"
+            ></iframe>
+          </div>
+        </div>
       </div>
     </div>
   );
