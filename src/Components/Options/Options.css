@@ -1,0 +1,14 @@
+.options-container {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  border: 2px solid #940eff;
+  border-radius: 10px;
+  padding: 0 0.75rem;
+  margin-left: 25%;
+}
+
+.option {
+  margin: 0.5rem;
+  width: 2rem;
+}
