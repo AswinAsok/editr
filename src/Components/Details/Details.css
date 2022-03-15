@@ -1,18 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 .details-container {
-  display: flex;
-  justify-content: center;
   background-color: white;
 }
 
 .details {
+  width: 80vw;
   font-family: "Poppins", sans-serif;
   box-shadow: 0px 0.7px 11.5px rgba(0, 0, 0, 0.028),
     0px 2.2px 38.6px rgba(0, 0, 0, 0.042), 0px 10px 173px rgba(0, 0, 0, 0.07);
   border: 2px solid #940eff;
   border-radius: 5px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .heading {
@@ -20,4 +19,11 @@
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 2vh;
+}
+
+@media only screen and (min-width: 1000px) {
+  .details {
+    width: 40vw;
+    height: 40vh;
+  }
 }
