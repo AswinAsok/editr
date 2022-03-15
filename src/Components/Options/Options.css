@@ -1,11 +1,15 @@
 .options-container {
-  background-color: white;
   position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.options{
+  background-color: white;
   bottom: 0;
   border: 2px solid #940eff;
   border-radius: 10px;
-  padding: 0 0.75rem;
-  margin-left: 25%;
 }
 
 .option {
