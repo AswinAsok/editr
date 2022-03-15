@@ -71,21 +71,3 @@
   box-shadow: 0px 0.7px 11.5px rgba(0, 0, 0, 0.028),
     0px 2.2px 38.6px rgba(0, 0, 0, 0.042), 0px 10px 173px rgba(0, 0, 0, 0.07);
 }
-
-.creator-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5vh;
-}
-
-.creator iframe {
-  width: 80vw;
-}
-
-@media only screen and (min-width: 1000px) {
-  .creator iframe {
-    width: 100vw;
-  }
-}
