@@ -30,20 +30,24 @@
     font-size: 2rem;
   }
   .nav-btns {
-    display: block;
+    display: flex;
   }
 
   .nbtn {
     background-color: white;
     font-size: 1rem;
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.4rem 1.2rem;
     margin: 0 0.5rem;
     border-radius: 5px;
     color: #940eff;
     border: 2px solid #940eff;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .nbtn:hover {
@@ -54,7 +58,7 @@
 
   .nbtn i {
     margin-left: 0.5rem;
-    font-size: 1.95rem;
+    font-size: 1.55rem;
     padding-top: 0.5vh;
     color: #940eff;
   }
