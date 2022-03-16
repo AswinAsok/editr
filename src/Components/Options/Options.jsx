@@ -29,7 +29,12 @@ const Options = ({ setText, listening }) => {
           }
         })()}
 
-        <i className="fi fi-rr-trash option"></i>
+        <i
+          className="fi fi-rr-trash option"
+          onClick={() => {
+            setText("");
+          }}
+        ></i>
         <a target="_blank" href="https://github.com/AswinAsok/editr">
           <i className="fi fi-rr-star option"></i>
         </a>
