@@ -1,13 +1,6 @@
-<center>
+<p align="center">
 <img src="./public/favicon.png" width="100px" />
-
-<br/>
-
-# The minimalistic Text Editr.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/35eab099-4b80-449e-939e-27a7927cbba2/deploy-status)](https://app.netlify.com/sites/editr/deploys)
-
-</center>
+<h1 align="center">The minimalistic Text Editr.</h1>
 
 ## Features 🚀
 
@@ -37,6 +30,6 @@
 - [Twitter](https://twitter.com/_aswin_asok_)
 - [Instagram](https://www.instagram.com/_aswin_asok_/)
 
-## Checkout [Editr.](https://editr.netlify.app) Now !
+## Checkout [Editr.](https://editr.netlify.app) Now ! [![Netlify Status](https://api.netlify.com/api/v1/badges/35eab099-4b80-449e-939e-27a7927cbba2/deploy-status)](https://app.netlify.com/sites/editr/deploys)
 
 ### Liked the Project, Support Me by Giving Editr a 🌟
