@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css");
 
 .textarea {
   width: 80vw;
@@ -27,25 +28,40 @@
 }
 
 .pribtn {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
   margin: 0.5rem;
   font-weight: 500;
   background-color: #940eff;
   color: white;
-  padding: 0.7rem 3rem;
+  padding: 0.4rem 3rem;
   border: none;
   font-size: 1.15rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pribtn i,
+.secbtn i {
+  margin-left: 0.5rem;
+  font-size: 1.95rem;
+  padding-top: 0.5vh;
 }
 
 .secbtn {
-  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  font-family: "Montserrat Alternates", sans-serif;
   margin: 0.5rem;
   font-weight: 500;
   color: #940eff;
   border: 2px solid #940eff;
   background-color: white;
-  padding: 0.7rem 3rem;
+  padding: 0.4rem 3rem;
   font-size: 1.15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 1000px) {
