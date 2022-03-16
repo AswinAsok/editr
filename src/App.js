@@ -20,6 +20,7 @@ function App() {
   const [words, setWords] = useState(0);
   const [characters, setCharacters] = useState(0);
   const [special, setSpecial] = useState(0);
+  const [stars, setStars] = useState(0);
   let format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   let localcount = 0;
 
@@ -54,11 +55,19 @@ function App() {
     }
   }, [listening]);
 
+  useEffect(async () => {
+    fetch(`https://api.github.com/repos/AswinAsok/text.ly`)
+      .then((res) => res.json())
+      .then((data) => {
+        setStars(data.stargazers_count);
+      });
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
       <div className="main-container">
-        <Editor text={text} setText={setText} />
+        <Editor text={text} setText={setText} stars={stars} />
         <Details words={words} characters={characters} special={special} />
       </div>
       <Options setText={setText} listening={listening} />

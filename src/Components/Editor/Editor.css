@@ -19,3 +19,40 @@
     width: 55vw;
   }
 }
+
+.buttons {
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pribtn {
+  font-family: "Poppins", sans-serif;
+  margin: 0.5rem;
+  font-weight: 500;
+  background-color: #940eff;
+  color: white;
+  padding: 0.7rem 3rem;
+  border: none;
+  font-size: 1.15rem;
+}
+
+.secbtn {
+  font-family: "Poppins", sans-serif;
+  margin: 0.5rem;
+  font-weight: 500;
+  color: #940eff;
+  border: 2px solid #940eff;
+  background-color: white;
+  padding: 0.7rem 3rem;
+  font-size: 1.15rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .buttons {
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
