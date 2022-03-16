@@ -73,6 +73,7 @@ function App() {
           characters={characters}
           special={special}
           listening={listening}
+          browserSupportsSpeechRecognition = {browserSupportsSpeechRecognition}
         />
       </div>
       <div className="buttons">

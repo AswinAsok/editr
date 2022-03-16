@@ -112,3 +112,12 @@
   transition-duration: 0.1s;
   background-color: #4ceb94;
 }
+
+.nospeech {
+  text-align: center;
+  color: rgb(235, 82, 82);
+}
+
+.nospeech span {
+  font-weight: 500;
+}

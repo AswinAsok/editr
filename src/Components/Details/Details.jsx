@@ -1,7 +1,13 @@
 import React from "react";
 import "./Details.css";
 
-const Details = ({ words, characters, special, listening }) => {
+const Details = ({
+  words,
+  characters,
+  special,
+  listening,
+  browserSupportsSpeechRecognition,
+}) => {
   return (
     <div className="details-container">
       <div className="details">
@@ -34,7 +40,14 @@ const Details = ({ words, characters, special, listening }) => {
         <div className="microphone-container">
           <p className="heading">Microphone Input Status</p>
           {(() => {
-            if (!listening) {
+            if (!browserSupportsSpeechRecognition) {
+              return (
+                <p className="nospeech">
+                  This browser doesn't support <br />
+                  <span>Speech Recognition !</span>.
+                </p>
+              );
+            } else if (!listening) {
               return (
                 <div className="indicators">
                   <div className="on">
