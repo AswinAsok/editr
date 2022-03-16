@@ -1,3 +1,10 @@
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+
+a {
+  text-decoration: none;
+}
+
 .options-container {
   position: fixed;
   bottom: 0;
@@ -12,9 +19,15 @@
   bottom: 0;
   border: 2px solid #940eff;
   border-radius: 10px;
+  padding-top: 0.5rem;
 }
 
 .option {
-  margin: 0.5rem 0.75rem;
-  width: 1.75rem;
+  margin: 1rem;
+  font-size: 1.95rem;
+  color: #940eff;
+}
+
+.option:hover {
+  color: #3a3a3a;
 }

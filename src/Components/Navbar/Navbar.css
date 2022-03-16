@@ -62,4 +62,8 @@
     padding-top: 0.5vh;
     color: #940eff;
   }
+
+  .nbtn i:hover {
+    color: #3a3a3a;
+  }
 }

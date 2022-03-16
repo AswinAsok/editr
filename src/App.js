@@ -73,16 +73,20 @@ function App() {
           characters={characters}
           special={special}
           listening={listening}
-          browserSupportsSpeechRecognition = {browserSupportsSpeechRecognition}
+          browserSupportsSpeechRecognition={browserSupportsSpeechRecognition}
         />
       </div>
       <div className="buttons">
-        <button className="pribtn">
-          {stars} Stars <i class="fi fi-brands-github"></i>
-        </button>
-        <button className="secbtn">
-          Follow me on <i class="fi fi-brands-twitter"></i>
-        </button>
+        <a href="https://github.com/AswinAsok/editr" target="_blank">
+          <button className="pribtn">
+            {stars} Stars <i class="fi fi-brands-github"></i>
+          </button>
+        </a>
+        <a href="https://twitter.com/_aswin_asok_" target="_blank">
+          <button className="secbtn">
+            Follow me on <i class="fi fi-brands-twitter"></i>
+          </button>
+        </a>
       </div>
       <Options setText={setText} listening={listening} />
     </div>

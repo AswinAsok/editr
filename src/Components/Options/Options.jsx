@@ -14,34 +14,25 @@ const Options = ({ setText, listening }) => {
         {(() => {
           if (!listening) {
             return (
-              <img
-                src={headset}
-                alt=""
-                className="option"
+              <i
+                className="fi fi-rr-headset option"
                 onClick={SpeechRecognition.startListening}
-              />
+              ></i>
             );
           } else {
             return (
-              <img
-                src={headset_on}
-                alt=""
-                className="option"
+              <i
+                className="fi fi-sr-headset option"
                 onClick={SpeechRecognition.stopListening}
-              />
+              ></i>
             );
           }
         })()}
 
-        <img
-          src={trash}
-          alt=""
-          className="option"
-          onClick={() => {
-            setText("");
-          }}
-        />
-        <img src={star} alt="" className="option" />
+        <i className="fi fi-rr-trash option"></i>
+        <a target="_blank" href="https://github.com/AswinAsok/editr">
+          <i className="fi fi-rr-star option"></i>
+        </a>
       </div>
     </div>
   );
