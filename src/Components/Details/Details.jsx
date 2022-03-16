@@ -30,6 +30,22 @@ const Details = ({ words, characters, special }) => {
           </div>
         </div>
 
+        <div className="microphone-container">
+          <p className="heading">Microphone Input Status</p>
+          <div className="indicators">
+            <div className="on">
+              <div className="indicator"></div>Mic On
+            </div>
+
+            <div className="listening">
+              <div className="indicator"></div>Listening..
+            </div>
+
+            <div className="off">
+              <div className="indicator"></div>Mic Off
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
