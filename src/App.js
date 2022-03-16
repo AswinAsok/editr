@@ -5,6 +5,9 @@ import Options from "./Components/Options/Options.jsx";
 import Details from "./Components/Details/Details";
 
 import { useEffect, useState } from "react";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 
 function App() {
   const [text, setText] = useState("");
@@ -13,6 +16,13 @@ function App() {
   const [special, setSpecial] = useState(0);
   let format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   let localcount = 0;
+
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition();
 
   useEffect(() => {
     if (text) {
@@ -31,6 +41,15 @@ function App() {
     }
   }, [text]);
 
+  useEffect(() => {
+    if (transcript.length > 0 && text.length > 0) {
+      setText(text + " " + transcript);
+      console.log(transcript);
+    } else if (transcript.length > 0) {
+      setText(transcript);
+    }
+  }, [listening]);
+
   return (
     <div className="App">
       <Navbar />
@@ -39,6 +58,13 @@ function App() {
         <Details words={words} characters={characters} special={special} />
       </div>
       <Options setText={setText} />
+      <div>
+        <p>Microphone: {listening ? "on" : "off"}</p>
+        <button onClick={SpeechRecognition.startListening}>Start</button>
+        <button onClick={SpeechRecognition.stopListening}>Stop</button>
+        <button onClick={resetTranscript}>Reset</button>
+        <p>{transcript}</p>
+      </div>
     </div>
   );
 }
