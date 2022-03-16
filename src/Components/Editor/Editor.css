@@ -40,6 +40,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+
+  cursor:pointer;
+  user-select:none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.pribtn:hover{
+  transition-duration: 0.1s;
+  background-color: #3A3A3A;
+}
+
+.secbtn:hover{
+  transition-duration: 0.1s;
+  color: #3A3A3A;
+  border: 2px solid #3A3A3A;
 }
 
 .pribtn i,
