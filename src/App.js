@@ -68,7 +68,12 @@ function App() {
       <Navbar />
       <div className="main-container">
         <Editor text={text} setText={setText} stars={stars} />
-        <Details words={words} characters={characters} special={special} />
+        <Details
+          words={words}
+          characters={characters}
+          special={special}
+          listening={listening}
+        />
       </div>
       <Options setText={setText} listening={listening} />
     </div>
