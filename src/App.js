@@ -44,7 +44,6 @@ function App() {
   useEffect(() => {
     if (transcript.length > 0 && text.length > 0) {
       setText(text + " " + transcript);
-      console.log(transcript);
     } else if (transcript.length > 0) {
       setText(transcript);
     }
@@ -57,14 +56,7 @@ function App() {
         <Editor text={text} setText={setText} />
         <Details words={words} characters={characters} special={special} />
       </div>
-      <Options setText={setText} />
-      <div>
-        <p>Microphone: {listening ? "on" : "off"}</p>
-        <button onClick={SpeechRecognition.startListening}>Start</button>
-        <button onClick={SpeechRecognition.stopListening}>Stop</button>
-        <button onClick={resetTranscript}>Reset</button>
-        <p>{transcript}</p>
-      </div>
+      <Options setText={setText} listening={listening} />
     </div>
   );
 }
