@@ -9,6 +9,12 @@ import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
 
+import { createSpeechlySpeechRecognition } from "@speechly/speech-recognition-polyfill";
+
+const appId = process.env.REACT_APP_APP_ID;
+const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
+SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
+
 function App() {
   const [text, setText] = useState("");
   const [words, setWords] = useState(0);
@@ -17,12 +23,10 @@ function App() {
   let format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
   let localcount = 0;
 
-  const {
-    transcript,
-    listening,
-    resetTranscript,
-    browserSupportsSpeechRecognition,
-  } = useSpeechRecognition();
+  const { transcript, listening, browserSupportsSpeechRecognition } =
+    useSpeechRecognition();
+  const startListening = () =>
+    SpeechRecognition.startListening({ continuous: true });
 
   useEffect(() => {
     if (text) {
@@ -38,14 +42,15 @@ function App() {
     } else {
       setCharacters(0);
       setWords(0);
+      setSpecial(0);
     }
   }, [text]);
 
   useEffect(() => {
     if (transcript.length > 0 && text.length > 0) {
-      setText(text + " " + transcript);
+      setText(text + " " + transcript.toLowerCase());
     } else if (transcript.length > 0) {
-      setText(transcript);
+      setText(transcript.toLowerCase());
     }
   }, [listening]);
 
