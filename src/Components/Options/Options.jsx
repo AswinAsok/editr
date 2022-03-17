@@ -16,14 +16,14 @@ const Options = ({ setText, listening, text }) => {
             if (!listening) {
               return (
                 <i
-                  className="fi fi-rr-headset option"
+                  className="fi fi-rr-microphone option"
                   onClick={SpeechRecognition.startListening}
                 ></i>
               );
             } else {
               return (
                 <i
-                  className="fi fi-sr-headset option"
+                  className="fi fi-sr-microphone option"
                   onClick={SpeechRecognition.stopListening}
                 ></i>
               );
