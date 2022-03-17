@@ -23,6 +23,7 @@
 ## Modules 🖱️
 
 - react-speech-recognition: React speech recognition is used to recognition the user's microphone input and display it onto the text editor.
+- react-confirm-alert: React confirm alert is used to show the confirm dialog box which the user click the trash button on the bottom options menu.
 
 ## About Me 🦸
 
