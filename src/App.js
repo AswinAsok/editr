@@ -82,14 +82,26 @@ function App() {
             {stars} Stars <i class="fi fi-brands-github"></i>
           </button>
         </a>
-        
+
         <a href="https://twitter.com/_aswin_asok_" target="_blank">
           <button className="secbtn">
             Follow me on <i class="fi fi-brands-twitter"></i>
           </button>
         </a>
+
+        <a
+          href="https://www.producthunt.com/posts/editr-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-editr&#0045;2"
+          target="_blank"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=336349&theme=light"
+            alt="Editr - Minimalistic&#0032;text&#0032;editor | Product Hunt"
+            className="prod-hunt"
+          />
+        </a>
       </div>
-      <Options setText={setText} listening={listening} text={text}/>
+
+      <Options setText={setText} listening={listening} text={text} />
     </div>
   );
 }
