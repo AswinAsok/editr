@@ -31,3 +31,41 @@ a {
 .option:hover {
   color: #3a3a3a;
 }
+
+.mheading {
+  font-size: 1.5rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+}
+
+.mtagline {
+  font-family: "Poppins", sans-serif;
+  margin-top: 1vh;
+}
+
+.mbtns {
+  margin-top: 2vh;
+}
+
+.mno,
+.myes {
+  margin-right: 0.5rem;
+  font-size: 1.05rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.mno {
+  background-color: #940eff;
+  color: white;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+}
+
+.myes {
+  border: 2px solid #940eff;
+  color: #940eff;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}

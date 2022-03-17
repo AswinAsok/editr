@@ -1,45 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Options.css";
-import headset from "./assets/headset.png";
-import headset_on from "./assets/headset_on.png";
-import trash from "./assets/trash.png";
-import star from "./assets/star.png";
+
+import ReactConfirmAlert, { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
 import SpeechRecognition from "react-speech-recognition";
 
 const Options = ({ setText, listening }) => {
+  const [showDialog, setShowDialog] = useState(false);
   return (
-    <div className="options-container">
-      <div className="options">
-        {(() => {
-          if (!listening) {
-            return (
-              <i
-                className="fi fi-rr-headset option"
-                onClick={SpeechRecognition.startListening}
-              ></i>
-            );
-          } else {
-            return (
-              <i
-                className="fi fi-sr-headset option"
-                onClick={SpeechRecognition.stopListening}
-              ></i>
-            );
-          }
-        })()}
+    <>
+      <div className="options-container">
+        <div className="options">
+          {(() => {
+            if (!listening) {
+              return (
+                <i
+                  className="fi fi-rr-headset option"
+                  onClick={SpeechRecognition.startListening}
+                ></i>
+              );
+            } else {
+              return (
+                <i
+                  className="fi fi-sr-headset option"
+                  onClick={SpeechRecognition.stopListening}
+                ></i>
+              );
+            }
+          })()}
 
-        <i
-          className="fi fi-rr-trash option"
-          onClick={() => {
-            setText("");
-          }}
-        ></i>
-        <a target="_blank" href="https://github.com/AswinAsok/editr">
-          <i className="fi fi-rr-star option"></i>
-        </a>
+          <i
+            className="fi fi-rr-trash option"
+            onClick={() => {
+              setShowDialog(true);
+            }}
+          ></i>
+          <a target="_blank" href="https://github.com/AswinAsok/editr">
+            <i className="fi fi-rr-star option"></i>
+          </a>
+        </div>
       </div>
-    </div>
+
+      <div>
+        {showDialog &&
+          confirmAlert({
+            customUI: ({ onClose }) => {
+              return (
+                <div className="modal-container">
+                  <p className="mheading">Are you sure?</p>
+                  <p className="mtagline">You want to delete this Text?</p>
+                  <div className="mbtns">
+                    <button className="mno" onClick={onClose}>
+                      No
+                    </button>
+                    <button
+                      className="myes"
+                      onClick={() => {
+                        setShowDialog(false);
+                        setText("");
+                        onClose();
+                      }}
+                    >
+                      Yes, Delete it!
+                    </button>
+                  </div>
+                </div>
+              );
+            },
+          })}
+      </div>
+    </>
   );
 };
 
