@@ -89,7 +89,7 @@ function App() {
           </button>
         </a>
       </div>
-      <Options setText={setText} listening={listening} />
+      <Options setText={setText} listening={listening} text={text}/>
     </div>
   );
 }

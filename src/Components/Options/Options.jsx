@@ -6,7 +6,7 @@ import "react-confirm-alert/src/react-confirm-alert.css";
 
 import SpeechRecognition from "react-speech-recognition";
 
-const Options = ({ setText, listening }) => {
+const Options = ({ setText, listening, text }) => {
   const [showDialog, setShowDialog] = useState(false);
   return (
     <>
@@ -33,7 +33,9 @@ const Options = ({ setText, listening }) => {
           <i
             className="fi fi-rr-trash option"
             onClick={() => {
-              setShowDialog(true);
+              if (text.length > 0) {
+                setShowDialog(true);
+              }
             }}
           ></i>
           <a target="_blank" href="https://github.com/AswinAsok/editr">
@@ -43,7 +45,8 @@ const Options = ({ setText, listening }) => {
       </div>
 
       <div>
-        {showDialog &&
+        {text.length > 0 &&
+          showDialog &&
           confirmAlert({
             customUI: ({ onClose }) => {
               return (
