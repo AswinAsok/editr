@@ -16,6 +16,7 @@ const Options = ({ setText, listening, text }) => {
             if (!listening) {
               return (
                 <i
+                  title="Microphone"
                   className="fi fi-rr-microphone option"
                   onClick={SpeechRecognition.startListening}
                 ></i>
@@ -31,6 +32,7 @@ const Options = ({ setText, listening, text }) => {
           })()}
 
           <i
+            title="Clear Text"
             className="fi fi-rr-trash option"
             onClick={() => {
               if (text.length > 0) {
@@ -39,7 +41,7 @@ const Options = ({ setText, listening, text }) => {
             }}
           ></i>
           <a target="_blank" href="https://github.com/AswinAsok/editr">
-            <i className="fi fi-rr-star option"></i>
+            <i title="Give a Star" className="fi fi-rr-star option"></i>
           </a>
         </div>
       </div>
