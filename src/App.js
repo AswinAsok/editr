@@ -26,12 +26,10 @@ function App() {
     const startListening = () => SpeechRecognition.startListening({ continuous: true });
 
 
-    useEffect(() => {
-        if (text) {
-            setCharacters(text.length);
-            // Count words by splitting on whitespace and filtering out empty strings
-            const wordCount = text.trim() ? text.trim().split(/\s+/).filter(Boolean).length : 0;
-            setWords(wordCount);
+  useEffect(() => {
+    if (text) {
+      setCharacters(text.replace(/\s/g, "").length);
+      setWords(text.trim().split(/\s+/).filter(Boolean).length);
 
             for (let index = 0; index < text.length; index++) {
                 if (format.test(text.charAt(index))) {
