@@ -25,6 +25,7 @@ function App() {
     const { transcript, listening, browserSupportsSpeechRecognition } = useSpeechRecognition();
     const startListening = () => SpeechRecognition.startListening({ continuous: true });
 
+
     useEffect(() => {
         if (text) {
             setCharacters(text.length);

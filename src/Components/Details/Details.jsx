@@ -59,7 +59,7 @@ const Details = ({
                   </div>
 
                   <div className="off">
-                    <div className="indicator working"></div>Mic Off
+                    <div className="indicator not-working"></div>Mic Off
                   </div>
                 </div>
               );
